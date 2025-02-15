@@ -1,3 +1,4 @@
+import sys
 from typing import Tuple
 
 
@@ -37,7 +38,7 @@ def get_result_interval_and_paths(n, m) -> Tuple[str, str]:
         if current_index == 0:
             break
 
-    intervals = ",".join(intervals_list)
+    intervals = "".join(intervals_list)
     paths = ",".join(paths_list)
 
     return intervals, paths
@@ -65,18 +66,20 @@ def get_result_interval(n, m) -> str:
         if current_index == 0:
             break
 
-    intervals: str = ",".join(intervals_list)
+    intervals: str = "".join(intervals_list)
 
     return intervals
 
 
-if __name__ == '__main__':
-    data: str = input("Введите аргументы через пробел n-длина массива, m-интервал: ")
-    n, m = data.split(" ")
+if __name__ == "__main__":
+    # Пример запуска программы: python task1.py 5 4
+    n: int = int(sys.argv[1])
+    m: int = int(sys.argv[2])
 
     # Первый вариант выводит только список путей, сложность получилась O(n)
-    result = get_result_interval(5, 4)
+    result = get_result_interval(n, m)
     print(result)
+
     # Второй вариант выводит список путей и интервалы, сложность получилась O(n*n)
-    result = get_result_interval_and_paths(5, 4)
-    print(f"Интервалы: {result[0]}, Полученный путь: {result[1]}")
+    # result = get_result_interval_and_paths(n, m)
+    # print(f"Интервалы: {result[0]}, Полученный путь: {result[1]}")
