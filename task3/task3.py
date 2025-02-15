@@ -77,7 +77,7 @@ def get_report(tests_path: str, values_path: str, report_path: str) -> None:
 
     # Записываем значения
     with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(report_data, f, indent=1, ensure_ascii=False)
+        json.dump(report_data, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":
