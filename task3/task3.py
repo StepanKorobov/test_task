@@ -60,11 +60,11 @@ def get_report(tests_path: str, values_path: str, report_path: str) -> None:
     report_path = os.path.join(project_path, report_path)
 
     # Читаем файл с тестами
-    with open(tests_path, 'r', encoding='utf-8') as f:
+    with open(tests_path, "r", encoding="utf-8") as f:
         tests_data = json.load(f)
 
     # Читаем файл со значениями
-    with open(values_path, 'r', encoding='utf-8') as f:
+    with open(values_path, "r", encoding="utf-8") as f:
         values_data = json.load(f)
 
     # Так как в values_data нам известна вложенность и она не меняется
@@ -76,11 +76,11 @@ def get_report(tests_path: str, values_path: str, report_path: str) -> None:
     data_parser(report_data, values_dict)
 
     # Записываем значения
-    with open(report_path, 'w', encoding='utf-8') as f:
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report_data, f, indent=1, ensure_ascii=False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Пример запуска программы: python task3.py tests.json values.json report.json
 
     # Путь к файлу с тестовыми данными
