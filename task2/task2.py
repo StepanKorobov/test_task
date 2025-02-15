@@ -61,9 +61,9 @@ def read_file_dor(path_to_dod: str) -> Tuple[Tuple[float, float]]:
 
 
 def get_poit_position(
-        circle_coordinate: Tuple[float, float],
-        circle_radius: float,
-        dot_coordinate: Tuple[float, float],
+    circle_coordinate: Tuple[float, float],
+    circle_radius: float,
+    dot_coordinate: Tuple[float, float],
 ) -> int:
     """
     Функция определяющая положение точки на окружности
@@ -80,10 +80,10 @@ def get_poit_position(
 
     # Вычисляем расстояние между центром окружности и точкой
     distance_squared = (dot_coordinate[0] - circle_coordinate[0]) ** 2 + (
-            dot_coordinate[1] - circle_coordinate[1]
+        dot_coordinate[1] - circle_coordinate[1]
     ) ** 2
     # Возводим окружность в квадрат
-    radius_squared = circle_radius ** 2
+    radius_squared = circle_radius**2
 
     # Если расстояние меньше окружности
     if distance_squared < radius_squared:
@@ -97,9 +97,9 @@ def get_poit_position(
 
 
 def determine_position_points(
-        circle_coordinate: Tuple[float, float],
-        circle_radius: float,
-        dot_coordinate: Tuple[Tuple[float, float]],
+    circle_coordinate: Tuple[float, float],
+    circle_radius: float,
+    dot_coordinate: Tuple[Tuple[float, float]],
 ) -> None:
     """
     Функция нахождения положения всех точек на окружности
