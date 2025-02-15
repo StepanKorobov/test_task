@@ -1,7 +1,7 @@
 import copy
+import json
 import os
 import sys
-import json
 from typing import Dict
 
 # Путь к файлу с заданием (нужен для создания пути к файлу)
